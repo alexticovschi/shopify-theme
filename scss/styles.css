@@ -76,4 +76,116 @@ body {
   display: block;
   padding: 10px;
 }
+
+.jumbo {
+  background: black;
+  height: 100vh;
+  width: 100%;
+  position: relative;
+}
+
+.jumbo__bg-image {
+  background: url("/assets/jumbobg.jpg");
+  height: 100%;
+  width: 100%;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  position: absolute;
+  z-index: 1;
+  top: 0;
+}
+
+.jumbo__transparent-color {
+  background: rgba(66, 53, 88, 0.7);
+  height: 100vh;
+  width: 100%;
+  position: absolute;
+  z-index: 2;
+}
+
+.jumbo__titles {
+  position: absolute;
+  z-index: 3;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  height: 100vh;
+}
+
+.jumbo__titles h1 {
+  font-size: 5rem;
+  color: #fffb0b;
+  font-weight: 900;
+  text-transform: uppercase;
+  -webkit-transform: translate3d(100px, 0, 0);
+          transform: translate3d(100px, 0, 0);
+}
+
+.jumbo__titles h2 {
+  font-size: 5rem;
+  color: white;
+  font-weight: 200;
+  text-transform: uppercase;
+  -webkit-transform: translate3d(130px, 0, 0);
+          transform: translate3d(130px, 0, 0);
+}
+
+.jumbo__state {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background: #fff;
+  position: absolute;
+  height: 15%;
+  z-index: 3;
+  width: 100%;
+  bottom: 0;
+}
+
+.jumbo__state__number {
+  font-size: 5rem;
+  -webkit-transform: translate3d(50px, 0, 0);
+          transform: translate3d(50px, 0, 0);
+}
+
+.jumbo__store-info {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  background: #0cdbdb;
+  position: absolute;
+  height: 15%;
+  z-index: 3;
+  width: 75%;
+  bottom: 0;
+  right: 0;
+}
+
+.jumbo__store-info img {
+  height: 100%;
+  width: 25%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  cursor: pointer;
+  -webkit-filter: saturate(15%);
+          filter: saturate(15%);
+  -webkit-transition: all 0.4s ease-in-out;
+  transition: all 0.4s ease-in-out;
+}
+
+.jumbo__store-info img:hover {
+  -webkit-filter: saturate(60%);
+          filter: saturate(60%);
+}
 /*# sourceMappingURL=styles.css.map */
