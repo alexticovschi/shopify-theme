@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>Document</title>
+    <link href="assets/reset.css" rel="stylesheet" />
+    <link
+      crossorigin="anonymous"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+      integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+      rel="stylesheet"
+    />
+    <link href="scss/styles.css" rel="stylesheet" />
+  </head>
+  <body>
+    <header class="header">
+      <div class="header__logo">
+        <a href="#">Storename</a>
+      </div>
+      <ul class="header__menu">
+        <li class="header__link">
+          <a href="#">About</a>
+        </li>
+        <li class="header__link header__dropdown">
+          <a href="#">About</a>
+
+          <div class="header__sub-menu">
+            <a class="header__sub-link" href="#">Link 1</a>
+            <a class="header__sub-link" href="#">Link 2</a>
+            <a class="header__sub-link" href="#">Link 3</a>
+          </div>
+        </li>
+      </ul>
+    </header>
+    <section id="jumbo">
+      <div class="bg-image"></div>
+      <div class="transparent-color"></div>
+      <div class="titles">
+        <h1>OFF WHITE</h1>
+        <h2>New Collection</h2>
+      </div>
+      <div class="state">
+        <span class="number">01</span>
+      </div>
+      <div class="store-info">
+        <img alt="" src="assets/store.jpg" />
+        <img alt="" src="assets/jumbobg.jpg" />
+        <img alt="" src="assets/guymodel.jpg" />
+        <img alt="" src="assets/summer-girl.jpg" />
+      </div>
+    </section>
+    <section class="collections">
+      <div class="row">
+        <div class="col-md-6 left-collection">
+          <div class="left-collection-img">
+            <div class="overlay"></div>
+            <img alt="" src="assets/summer-girl.jpg" />
+          </div>
+
+          <span class="collection-title"
+            >Summer
+            <br />
+            Collection</span
+          >
+        </div>
+        <div class="col-md-6 right-collection">
+          <img
+            alt=""
+            class="right-collection-img"
+            src="assets/summer-girl.jpg"
+          />
+          <span class="collection-title"
+            >Summer
+            <br />
+            Collection</span
+          >
+        </div>
+      </div>
+    </section>
+    <footer></footer>
+  </body>
+</html>
