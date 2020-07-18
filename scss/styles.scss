@@ -7,6 +7,8 @@
 html,
 body {
   font-family: 'Poppins', sans-serif;
+  overflow-x: hidden;
+  background-color: #f4f7fd;
 }
 
 .header {
@@ -75,6 +77,7 @@ body {
   height: 100vh;
   width: 100%;
   position: relative;
+  margin-bottom: 2.5rem;
 
   &__bg-image {
     background: url('/assets/jumbobg.jpg');
@@ -138,13 +141,13 @@ body {
 
   &__store-info {
     display: flex;
-    background: #0cdbdb;
     position: absolute;
-    height: 15%;
+    height: 25%;
     z-index: 3;
     width: 75%;
     bottom: 0;
     right: 0;
+    padding-top: 2rem;
 
     img {
       height: 100%;
@@ -153,9 +156,89 @@ body {
       cursor: pointer;
       filter: saturate(15%);
       transition: all 0.4s ease-in-out;
+      margin-left: 0.5rem;
 
       &:hover {
         filter: saturate(60%);
+      }
+    }
+  }
+}
+
+.collections {
+  &__left-collection {
+    position: relative;
+
+    &__collection-title {
+      position: absolute;
+      display: flex;
+      justify-content: center;
+      align-items: flex-end;
+      flex-direction: column;
+      top: 0;
+      left: 0;
+      height: 100%;
+      width: 100%;
+      font-size: 3.5rem;
+      font-weight: 700;
+      text-transform: uppercase;
+
+      span {
+        line-height: 1;
+        transform: translate3d(-35px, 50px, 0);
+      }
+    }
+  }
+
+  &__left-collection-wrapper {
+    position: relative;
+    height: 100%;
+    width: 100%;
+  }
+
+  &__overlay {
+    position: absolute;
+    background: rgba(255, 255, 000, 0.5);
+    height: 100%;
+    width: 100%;
+  }
+
+  &__left-collection-img {
+    width: 100%;
+    height: 500px;
+    object-fit: cover;
+    object-position: center;
+  }
+
+  &__right-collection {
+    &__bg {
+      height: 500px;
+      background-color: #dddfe4;
+
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    &__img-wrapper {
+      width: 300px;
+      height: 300px;
+    }
+
+    &__img {
+      height: 100%;
+      width: 100%;
+      object-fit: cover;
+    }
+
+    &__collection-title {
+      span {
+        font-size: 3.5rem;
+        font-weight: 700;
+        text-transform: uppercase;
+        color: #fff;
+        transform: translate3d(-68px, -100px, 0);
+        display: block;
       }
     }
   }
