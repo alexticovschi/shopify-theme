@@ -8,4 +8,72 @@ html,
 body {
   font-family: 'Poppins', sans-serif;
 }
+
+.header {
+  position: fixed;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  width: 100%;
+  height: 80px;
+  padding: 0 10%;
+  z-index: 10;
+}
+
+.header__logo a {
+  font-weight: 700;
+  font-size: 2rem;
+  text-decoration: none;
+  color: #fff;
+  text-transform: uppercase;
+}
+
+.header__menu {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.header__menu a {
+  display: inline-block;
+  font-weight: 400;
+  text-decoration: none;
+  color: #fff;
+  text-transform: uppercase;
+}
+
+.header__link {
+  padding: 20px;
+}
+
+.header__dropdown:hover .header__sub-menu {
+  display: block;
+}
+
+.header__sub-menu {
+  display: none;
+  position: absolute;
+  -webkit-transform: translate3d(0, 20px, 0);
+          transform: translate3d(0, 20px, 0);
+  background: #fff;
+  min-width: 150px;
+  color: red;
+  border-radius: 3px;
+}
+
+.header__sub-menu:hover {
+  display: block;
+}
+
+.header__sub-menu a {
+  color: black;
+  display: block;
+  padding: 10px;
+}
 /*# sourceMappingURL=styles.css.map */
