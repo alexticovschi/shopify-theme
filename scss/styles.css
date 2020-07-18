@@ -4,6 +4,10 @@
           box-sizing: border-box;
 }
 
+a {
+  text-decoration: none !important;
+}
+
 html,
 body {
   font-family: 'Poppins', sans-serif;
@@ -84,7 +88,6 @@ body {
   height: 100vh;
   width: 100%;
   position: relative;
-  margin-bottom: 2.5rem;
 }
 
 .jumbo__bg-image {
@@ -193,6 +196,10 @@ body {
           filter: saturate(60%);
 }
 
+.collections {
+  margin: 2.5rem 0;
+}
+
 .collections__left-collection {
   position: relative;
 }
@@ -283,5 +290,63 @@ body {
   -webkit-transform: translate3d(-68px, -100px, 0);
           transform: translate3d(-68px, -100px, 0);
   display: block;
+}
+
+.off-sale {
+  height: 700px;
+  width: 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.off-sale__overlay {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 100%;
+  width: 100%;
+  background: rgba(0, 0, 0, 0.5);
+}
+
+.off-sale__number {
+  color: #fff;
+  font-size: 12rem;
+  font-weight: 700;
+}
+
+.off-sale__title {
+  color: #fff;
+  font-size: 3rem;
+  font-weight: 700;
+  letter-spacing: 15px;
+  margin-bottom: 1.5rem;
+}
+
+.off-sale__link {
+  color: #fff;
+  font-size: 1.2rem;
+  font-weight: 400;
+  letter-spacing: 15px;
+  padding: 16px 60px;
+  border: 2px solid #fff;
+  text-transform: uppercase;
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+}
+
+.off-sale__link:hover {
+  background-color: #fffb0b;
+  color: #000;
 }
 /*# sourceMappingURL=styles.css.map */
