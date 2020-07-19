@@ -3,6 +3,7 @@
   --primary-color: #ffff00;
   --white-color: #fff;
   --black-color: #000;
+  --grey-color: rgb(204, 204, 204);
   --body-color: #f4f7fd;
   --jumbo-bg-color: rgba(66, 53, 88, 0.7);
   --collections-overlay-color: rgba(255, 255, 000, 0.5);
@@ -445,5 +446,65 @@ body {
 .products .product__price {
   text-align: center;
   font-weight: 600;
+}
+
+/* Footer SECTION */
+.footer {
+  background: var(--footer-bg-color);
+  padding: 5rem 0;
+}
+
+.footer__menu a {
+  color: var(--white-color);
+}
+
+.footer__menu-title, .footer__social-title {
+  color: var(--primary-color);
+  font-size: 1.2rem;
+  text-transform: uppercase;
+  margin-bottom: 1rem;
+  display: block;
+}
+
+.footer__social-icons {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.footer__social-icons li {
+  margin-right: 20px;
+}
+
+.footer__social-icons a {
+  font-size: 1.2rem;
+  height: 50px;
+  width: 50px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background: var(--white-color);
+  color: var(--black-color);
+  border-radius: 50%;
+  text-decoration: none;
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+}
+
+.footer__social-icons a:hover {
+  color: var(--black-color);
+  background-color: var(--primary-color);
+}
+
+.footer__address {
+  color: var(--grey-color);
+  text-align: center;
+  display: block;
 }
 /*# sourceMappingURL=styles.css.map */
