@@ -12,9 +12,11 @@ html,
 body {
   font-family: 'Poppins', sans-serif;
   overflow-x: hidden;
+  width: 100vw;
   background-color: #f4f7fd;
 }
 
+/* Header SECTION */
 .header {
   position: fixed;
   display: -webkit-box;
@@ -83,6 +85,7 @@ body {
   padding: 10px;
 }
 
+/* Jumbo SECTION */
 .jumbo {
   background: black;
   height: 100vh;
@@ -196,6 +199,7 @@ body {
           filter: saturate(60%);
 }
 
+/* Collections SECTION */
 .collections {
   margin: 2.5rem 0;
 }
@@ -292,6 +296,7 @@ body {
   display: block;
 }
 
+/* Off-sale SECTION */
 .off-sale {
   height: 700px;
   width: 100%;
@@ -348,5 +353,85 @@ body {
 .off-sale__link:hover {
   background-color: #fffb0b;
   color: #000;
+}
+
+/* Products SECTION */
+.products {
+  padding: 4rem 0 2.5rem 0;
+}
+
+.products__title {
+  font-size: 2rem;
+  margin-bottom: 2rem;
+  text-align: center;
+  font-weight: 700;
+}
+
+.products .product {
+  margin-bottom: 1.5rem;
+}
+
+.products .product__bg {
+  position: relative;
+  background: #fff;
+  min-height: 300px;
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -ms-flex-line-pack: center;
+      align-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.products .product__img {
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.products .product__overlay {
+  position: absolute;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -ms-flex-line-pack: center;
+      align-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  height: 100%;
+  width: 100%;
+  padding: 0 1rem;
+  color: #ffff00;
+  background: #161616;
+  -webkit-transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out;
+  opacity: 0;
+}
+
+.products .product__overlay:hover {
+  opacity: 1;
+}
+
+.products .product__title {
+  text-align: center;
+  font-weight: 600;
+  font-size: 1.2rem;
+}
+
+.products .product__price {
+  text-align: center;
+  font-weight: 600;
 }
 /*# sourceMappingURL=styles.css.map */

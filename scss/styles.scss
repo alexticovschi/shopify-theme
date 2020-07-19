@@ -12,8 +12,11 @@ html,
 body {
   font-family: 'Poppins', sans-serif;
   overflow-x: hidden;
+  width: 100vw;
   background-color: #f4f7fd;
 }
+
+/* Header SECTION */
 
 .header {
   position: fixed;
@@ -75,6 +78,8 @@ body {
     }
   }
 }
+
+/* Jumbo SECTION */
 
 .jumbo {
   background: black;
@@ -168,6 +173,8 @@ body {
   }
 }
 
+/* Collections SECTION */
+
 .collections {
   margin: 2.5rem 0;
 
@@ -249,6 +256,8 @@ body {
   }
 }
 
+/* Off-sale SECTION */
+
 .off-sale {
   height: 700px;
   width: 100%;
@@ -294,6 +303,67 @@ body {
     &:hover {
       background-color: rgb(255, 251, 11);
       color: #000;
+    }
+  }
+}
+
+/* Products SECTION */
+.products {
+  padding: 4rem 0 2.5rem 0;
+
+  &__title {
+    font-size: 2rem;
+    margin-bottom: 2rem;
+    text-align: center;
+    font-weight: 700;
+  }
+
+  .product {
+    margin-bottom: 1.5rem;
+    &__bg {
+      position: relative;
+      background: #fff;
+      min-height: 300px;
+      height: 100%;
+      display: flex;
+      justify-content: center;
+      align-content: center;
+      flex-direction: column;
+    }
+
+    &__img {
+      width: 100%;
+      object-fit: cover;
+    }
+
+    &__overlay {
+      position: absolute;
+      display: flex;
+      justify-content: center;
+      align-content: center;
+      flex-direction: column;
+      height: 100%;
+      width: 100%;
+      padding: 0 1rem;
+      color: #ffff00;
+      background: #161616;
+      transition: all 0.2s ease-in-out;
+      opacity: 0;
+
+      &:hover {
+        opacity: 1;
+      }
+    }
+
+    &__title {
+      text-align: center;
+      font-weight: 600;
+      font-size: 1.2rem;
+    }
+
+    &__price {
+      text-align: center;
+      font-weight: 600;
     }
   }
 }
