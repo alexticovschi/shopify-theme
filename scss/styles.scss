@@ -1,5 +1,18 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;400;500;600;700&display=swap');
 
+:root {
+  --primary-color: #ffff00;
+  --white-color: #fff;
+  --black-color: #000;
+  --body-color: #f4f7fd;
+  --jumbo-bg-color: rgba(66, 53, 88, 0.7);
+  --collections-overlay-color: rgba(255, 255, 000, 0.5);
+  --right-collection-bg-color: #dddfe4;
+  --off-sale-overlay-bg-color: rgba(0, 0, 0, 0.5);
+  --product-overlay-bg-color: #161616;
+  --footer-bg-color: #1b1b1b;
+}
+
 * {
   box-sizing: border-box;
 }
@@ -13,7 +26,7 @@ body {
   font-family: 'Poppins', sans-serif;
   overflow-x: hidden;
   width: 100vw;
-  background-color: #f4f7fd;
+  background-color: var(--body-color);
 }
 
 /* Header SECTION */
@@ -32,7 +45,7 @@ body {
     font-weight: 700;
     font-size: 2rem;
     text-decoration: none;
-    color: #fff;
+    color: var(--white-color);
     text-transform: uppercase;
   }
 
@@ -43,7 +56,7 @@ body {
       display: inline-block;
       font-weight: 400;
       text-decoration: none;
-      color: #fff;
+      color: var(--white-color);
       text-transform: uppercase;
     }
   }
@@ -66,13 +79,12 @@ body {
     display: none;
     position: absolute;
     transform: translate3d(0, 20px, 0);
-    background: #fff;
+    background: var(--white-color);
     min-width: 150px;
-    color: red;
     border-radius: 3px;
 
     a {
-      color: black;
+      color: var(--black-color);
       display: block;
       padding: 10px;
     }
@@ -82,7 +94,7 @@ body {
 /* Jumbo SECTION */
 
 .jumbo {
-  background: black;
+  background: var(--black-color);
   height: 100vh;
   width: 100%;
   position: relative;
@@ -100,7 +112,7 @@ body {
   }
 
   &__transparent-color {
-    background: rgba(66, 53, 88, 0.7);
+    background: var(--jumbo-bg-color);
     height: 100vh;
     width: 100%;
     position: absolute;
@@ -117,14 +129,14 @@ body {
 
     h1 {
       font-size: 5rem;
-      color: rgb(255, 251, 11);
+      color: var(--primary-color);
       font-weight: 900;
       text-transform: uppercase;
       transform: translate3d(100px, 0, 0);
     }
     h2 {
       font-size: 5rem;
-      color: white;
+      color: var(--white-color);
       font-weight: 200;
       text-transform: uppercase;
       transform: translate3d(130px, 0, 0);
@@ -134,7 +146,7 @@ body {
   &__state {
     display: flex;
     align-items: center;
-    background: #fff;
+    background: var(--white-color);
     position: absolute;
     height: 15%;
     z-index: 3;
@@ -210,7 +222,7 @@ body {
 
   &__overlay {
     position: absolute;
-    background: rgba(255, 255, 000, 0.5);
+    background: var(--collections-overlay-color);
     height: 100%;
     width: 100%;
   }
@@ -225,7 +237,7 @@ body {
   &__right-collection {
     &__bg {
       height: 500px;
-      background-color: #dddfe4;
+      background-color: var(--right-collection-bg-color);
 
       display: flex;
       justify-content: center;
@@ -248,7 +260,7 @@ body {
         font-size: 3.5rem;
         font-weight: 700;
         text-transform: uppercase;
-        color: #fff;
+        color: var(--white-color);
         transform: translate3d(-68px, -100px, 0);
         display: block;
       }
@@ -273,17 +285,17 @@ body {
 
     height: 100%;
     width: 100%;
-    background: rgba(0, 0, 0, 0.5);
+    background: var(--off-sale-overlay-bg-color);
   }
 
   &__number {
-    color: #fff;
+    color: var(--white-color);
     font-size: 12rem;
     font-weight: 700;
   }
 
   &__title {
-    color: #fff;
+    color: var(--white-color);
     font-size: 3rem;
     font-weight: 700;
     letter-spacing: 15px;
@@ -291,18 +303,18 @@ body {
   }
 
   &__link {
-    color: #fff;
+    color: var(--white-color);
     font-size: 1.2rem;
     font-weight: 400;
     letter-spacing: 15px;
     padding: 16px 60px;
-    border: 2px solid #fff;
+    border: 2px solid var(--white-color);
     text-transform: uppercase;
     transition: all 0.3s ease-in-out;
 
     &:hover {
-      background-color: rgb(255, 251, 11);
-      color: #000;
+      background-color: var(--primary-color);
+      color: var(--black-color);
     }
   }
 }
@@ -322,7 +334,7 @@ body {
     margin-bottom: 1.5rem;
     &__bg {
       position: relative;
-      background: #fff;
+      background: var(--white-color);
       min-height: 300px;
       height: 100%;
       display: flex;
@@ -345,8 +357,8 @@ body {
       height: 100%;
       width: 100%;
       padding: 0 1rem;
-      color: #ffff00;
-      background: #161616;
+      color: var(--primary-color);
+      background: var(--product-overlay-bg-color);
       transition: all 0.2s ease-in-out;
       opacity: 0;
 

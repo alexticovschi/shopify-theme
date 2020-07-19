@@ -1,4 +1,17 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;400;500;600;700&display=swap");
+:root {
+  --primary-color: #ffff00;
+  --white-color: #fff;
+  --black-color: #000;
+  --body-color: #f4f7fd;
+  --jumbo-bg-color: rgba(66, 53, 88, 0.7);
+  --collections-overlay-color: rgba(255, 255, 000, 0.5);
+  --right-collection-bg-color: #dddfe4;
+  --off-sale-overlay-bg-color: rgba(0, 0, 0, 0.5);
+  --product-overlay-bg-color: #161616;
+  --footer-bg-color: #1b1b1b;
+}
+
 * {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
@@ -13,7 +26,7 @@ body {
   font-family: 'Poppins', sans-serif;
   overflow-x: hidden;
   width: 100vw;
-  background-color: #f4f7fd;
+  background-color: var(--body-color);
 }
 
 /* Header SECTION */
@@ -38,7 +51,7 @@ body {
   font-weight: 700;
   font-size: 2rem;
   text-decoration: none;
-  color: #fff;
+  color: var(--white-color);
   text-transform: uppercase;
 }
 
@@ -52,7 +65,7 @@ body {
   display: inline-block;
   font-weight: 400;
   text-decoration: none;
-  color: #fff;
+  color: var(--white-color);
   text-transform: uppercase;
 }
 
@@ -69,9 +82,8 @@ body {
   position: absolute;
   -webkit-transform: translate3d(0, 20px, 0);
           transform: translate3d(0, 20px, 0);
-  background: #fff;
+  background: var(--white-color);
   min-width: 150px;
-  color: red;
   border-radius: 3px;
 }
 
@@ -80,14 +92,14 @@ body {
 }
 
 .header__sub-menu a {
-  color: black;
+  color: var(--black-color);
   display: block;
   padding: 10px;
 }
 
 /* Jumbo SECTION */
 .jumbo {
-  background: black;
+  background: var(--black-color);
   height: 100vh;
   width: 100%;
   position: relative;
@@ -106,7 +118,7 @@ body {
 }
 
 .jumbo__transparent-color {
-  background: rgba(66, 53, 88, 0.7);
+  background: var(--jumbo-bg-color);
   height: 100vh;
   width: 100%;
   position: absolute;
@@ -131,7 +143,7 @@ body {
 
 .jumbo__titles h1 {
   font-size: 5rem;
-  color: #fffb0b;
+  color: var(--primary-color);
   font-weight: 900;
   text-transform: uppercase;
   -webkit-transform: translate3d(100px, 0, 0);
@@ -140,7 +152,7 @@ body {
 
 .jumbo__titles h2 {
   font-size: 5rem;
-  color: white;
+  color: var(--white-color);
   font-weight: 200;
   text-transform: uppercase;
   -webkit-transform: translate3d(130px, 0, 0);
@@ -154,7 +166,7 @@ body {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  background: #fff;
+  background: var(--white-color);
   position: absolute;
   height: 15%;
   z-index: 3;
@@ -246,7 +258,7 @@ body {
 
 .collections__overlay {
   position: absolute;
-  background: rgba(255, 255, 0, 0.5);
+  background: var(--collections-overlay-color);
   height: 100%;
   width: 100%;
 }
@@ -262,7 +274,7 @@ body {
 
 .collections__right-collection__bg {
   height: 500px;
-  background-color: #dddfe4;
+  background-color: var(--right-collection-bg-color);
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -290,7 +302,7 @@ body {
   font-size: 3.5rem;
   font-weight: 700;
   text-transform: uppercase;
-  color: #fff;
+  color: var(--white-color);
   -webkit-transform: translate3d(-68px, -100px, 0);
           transform: translate3d(-68px, -100px, 0);
   display: block;
@@ -321,17 +333,17 @@ body {
           align-items: center;
   height: 100%;
   width: 100%;
-  background: rgba(0, 0, 0, 0.5);
+  background: var(--off-sale-overlay-bg-color);
 }
 
 .off-sale__number {
-  color: #fff;
+  color: var(--white-color);
   font-size: 12rem;
   font-weight: 700;
 }
 
 .off-sale__title {
-  color: #fff;
+  color: var(--white-color);
   font-size: 3rem;
   font-weight: 700;
   letter-spacing: 15px;
@@ -339,20 +351,20 @@ body {
 }
 
 .off-sale__link {
-  color: #fff;
+  color: var(--white-color);
   font-size: 1.2rem;
   font-weight: 400;
   letter-spacing: 15px;
   padding: 16px 60px;
-  border: 2px solid #fff;
+  border: 2px solid var(--white-color);
   text-transform: uppercase;
   -webkit-transition: all 0.3s ease-in-out;
   transition: all 0.3s ease-in-out;
 }
 
 .off-sale__link:hover {
-  background-color: #fffb0b;
-  color: #000;
+  background-color: var(--primary-color);
+  color: var(--black-color);
 }
 
 /* Products SECTION */
@@ -373,7 +385,7 @@ body {
 
 .products .product__bg {
   position: relative;
-  background: #fff;
+  background: var(--white-color);
   min-height: 300px;
   height: 100%;
   display: -webkit-box;
@@ -413,8 +425,8 @@ body {
   height: 100%;
   width: 100%;
   padding: 0 1rem;
-  color: #ffff00;
-  background: #161616;
+  color: var(--primary-color);
+  background: var(--product-overlay-bg-color);
   -webkit-transition: all 0.2s ease-in-out;
   transition: all 0.2s ease-in-out;
   opacity: 0;
