@@ -1,4 +1,4 @@
-let jumboTL = gsap.timeline();
+const jumboTL = gsap.timeline();
 
 // create a timeline of each animation
 jumboTL
@@ -85,3 +85,56 @@ jumboTL
     },
     '>-1.8'
   );
+
+const collectionsTL = gsap.timeline();
+collectionsTL
+  .fromTo(
+    '.collections .col-md-6',
+    {
+      y: 300,
+      opacity: 0,
+    },
+    {
+      y: 0,
+      opacity: 1,
+      duration: 1,
+    }
+  )
+  .fromTo(
+    '.collections .l-coll-title ',
+    {
+      y: 300,
+      opacity: 0,
+    },
+    {
+      y: 0,
+      opacity: 1,
+      duration: 1,
+    }
+  )
+  .fromTo(
+    '.collections .r-coll-title span',
+    {
+      y: 300,
+      opacity: 0,
+    },
+    {
+      y: -100,
+      opacity: 1,
+      duration: 1,
+    },
+    '>-.8'
+  );
+
+const homeController = new ScrollMagic.Controller();
+
+const collectionsScene = new ScrollMagic.Scene({
+  triggerElement: '.collections',
+  triggerHook: 1,
+  reverse: false,
+  offset: 150,
+  duration: 0,
+})
+  .setTween(collectionsTL)
+  .addIndicators()
+  .addTo(homeController);
