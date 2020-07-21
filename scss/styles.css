@@ -805,25 +805,4 @@ body {
     text-align: left;
   }
 }
-
-/* tablet */
-@media (min-width: 768px) and (max-width: 991px) {
-  body {
-    background-color: red;
-  }
-}
-
-/* large phones */
-@media (min-width: 576px) and (max-width: 767px) {
-  body {
-    background-color: yellow;
-  }
-}
-
-/* small phones */
-@media (max-width: 575px) {
-  body {
-    background-color: orangered;
-  }
-}
 /*# sourceMappingURL=styles.css.map */
