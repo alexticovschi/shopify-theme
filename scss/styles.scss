@@ -324,6 +324,7 @@ body {
 /* Products SECTION */
 .products {
   padding: 4rem 0 2.5rem 0;
+  overflow: hidden;
 
   &__title {
     font-size: 2rem;
@@ -386,6 +387,7 @@ body {
 .footer {
   background: var(--footer-bg-color);
   padding: 5rem 0;
+  overflow: hidden;
 
   &__menu a {
     color: var(--white-color);

@@ -2,8 +2,7 @@ const jumboTL = gsap.timeline();
 
 // create a timeline of each animation
 
-/* JUMBO ANIMATION */
-
+/* Jumbo ANIMATION */
 jumboTL
   .fromTo(
     '.jumbo__transparent-color',
@@ -89,8 +88,7 @@ jumboTL
     '>-1.8'
   );
 
-/* COLLECTIONS ANIMATION */
-
+/* Collections ANIMATION */
 const collectionsTL = gsap.timeline();
 collectionsTL
   .fromTo(
@@ -144,8 +142,7 @@ const collectionsScene = new ScrollMagic.Scene({
   .addIndicators()
   .addTo(homeController);
 
-/* HEADER ANIMATION */
-
+/* Header ANIMATION */
 const headerTL = gsap.timeline();
 headerTL
   .fromTo(
@@ -178,5 +175,104 @@ const headerScene = new ScrollMagic.Scene({
   duration: 0,
 })
   .setTween(headerTL)
+  .addIndicators()
+  .addTo(homeController);
+
+/* Off-sale ANIMATION */
+const offsaleTL = gsap.timeline();
+offsaleTL
+  .fromTo(
+    '.off-sale',
+    {
+      opacity: 0,
+    },
+    {
+      opacity: 1,
+    }
+  )
+  .fromTo(
+    '.off-sale__number',
+    {
+      scale: 0,
+    },
+    {
+      scale: 1,
+      duration: 1,
+    }
+  )
+  .fromTo(
+    '.off-sale__title',
+    {
+      scale: 0,
+    },
+    {
+      scale: 1,
+      duration: 1,
+    },
+    '>-1'
+  );
+
+const offsaleScene = new ScrollMagic.Scene({
+  triggerElement: '.off-sale',
+  triggerHook: 1,
+  reverse: true,
+  offset: 150,
+  duration: document.querySelector('.off-sale').offsetHeight,
+})
+  .setTween(offsaleTL)
+  .addIndicators()
+  .addTo(homeController);
+
+/* Products ANIMATION */
+const productsTL = gsap.timeline();
+productsTL.fromTo(
+  '.products .product__bg',
+  {
+    opacity: 0,
+    y: 100,
+  },
+  {
+    opacity: 1,
+    y: 0,
+    stagger: 0.3,
+    duration: 0.3,
+  }
+);
+
+const productsScene = new ScrollMagic.Scene({
+  triggerElement: '.products',
+  triggerHook: 1,
+  reverse: false,
+  offset: 20,
+  duration: 0,
+})
+  .setTween(productsTL)
+  .addIndicators()
+  .addTo(homeController);
+
+/* Footer ANIMATION */
+const footerTL = gsap.timeline();
+footerTL.fromTo(
+  '.footer .footer-fade-in',
+  {
+    opacity: 0,
+    y: 100,
+  },
+  {
+    opacity: 1,
+    y: 0,
+    stagger: 0.3,
+    duration: 0.3,
+  }
+);
+
+const footerScene = new ScrollMagic.Scene({
+  triggerElement: '.footer',
+  triggerHook: 1,
+  reverse: false,
+  offset: 50,
+  duration: 0,
+})
+  .setTween(footerTL)
   .addIndicators()
   .addTo(homeController);
