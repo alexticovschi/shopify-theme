@@ -22,7 +22,7 @@
       <div class="header__logo">
         <a href="#">Storename</a>
       </div>
-      <ul class="header__menu">
+      <ul class="header__menu mobile-mode">
         <li class="header__link">
           <a href="#">About</a>
         </li>
@@ -35,8 +35,45 @@
             <a class="header__sub-link" href="#">Link 3</a>
           </div>
         </li>
+        <li class="header__open-mobile-menu">
+          <i aria-hidden="true" class="fa fa-bars"></i>
+        </li>
       </ul>
     </header>
+    <section class="mobile-menu active">
+      <div class="mobile-menu__logo">
+        <div class="mobile-menu__close-menu">
+          <i aria-hidden="true" class="fa fa-times"></i>
+        </div>
+        <a href="#">Storename</a>
+      </div>
+      <ul class="mobile-menu__list">
+        <li class="mobile-menu__link">
+          <a href="#">About</a>
+        </li>
+        <li class="mobile-menu__link mobile-menu__dropdown">
+          <a href="#">Products</a>
+
+          <div class="mobile-menu__sub-menu">
+            <a class="mobile-menu__sub-link" href="#">Shirts</a>
+            <a class="mobile-menu__sub-link" href="#">Shoes</a>
+            <a class="mobile-menu__sub-link" href="#">Accessories</a>
+          </div>
+        </li>
+        <li class="mobile-menu__link">
+          <a href="#">About</a>
+        </li>
+        <li class="mobile-menu__link mobile-menu__dropdown">
+          <a href="#">About</a>
+
+          <div class="mobile-menu__sub-menu">
+            <a class="mobile-menu__sub-link" href="#">Link 1</a>
+            <a class="mobile-menu__sub-link" href="#">Link 2</a>
+            <a class="mobile-menu__sub-link" href="#">Link 3</a>
+          </div>
+        </li>
+      </ul>
+    </section>
     <section class="jumbo">
       <div class="jumbo__bg-image"></div>
       <div class="jumbo__transparent-color"></div>
@@ -110,6 +147,19 @@
       <h2 class="products__title">Top Products</h2>
       <div class="container">
         <div class="row">
+          <div class="col-md-3 product">
+            <a class="product__bg" href="#">
+              <img
+                alt="product"
+                class="product__img"
+                src="assets/product.png"
+              />
+              <div class="product__overlay">
+                <span class="product__title">Jordan Air Jordan 5 Retro</span>
+                <span class="product__title">&#163;349.99</span>
+              </div>
+            </a>
+          </div>
           <div class="col-md-3 product">
             <a class="product__bg" href="#">
               <img

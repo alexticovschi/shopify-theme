@@ -139,7 +139,7 @@ const collectionsScene = new ScrollMagic.Scene({
   duration: 0,
 })
   .setTween(collectionsTL)
-  .addIndicators()
+  // .addIndicators()
   .addTo(homeController);
 
 /* Header ANIMATION */
@@ -175,7 +175,7 @@ const headerScene = new ScrollMagic.Scene({
   duration: 0,
 })
   .setTween(headerTL)
-  .addIndicators()
+  // .addIndicators()
   .addTo(homeController);
 
 /* Off-sale ANIMATION */
@@ -220,7 +220,7 @@ const offsaleScene = new ScrollMagic.Scene({
   duration: document.querySelector('.off-sale').offsetHeight,
 })
   .setTween(offsaleTL)
-  .addIndicators()
+  // .addIndicators()
   .addTo(homeController);
 
 /* Products ANIMATION */
@@ -247,7 +247,7 @@ const productsScene = new ScrollMagic.Scene({
   duration: 0,
 })
   .setTween(productsTL)
-  .addIndicators()
+  // .addIndicators()
   .addTo(homeController);
 
 /* Footer ANIMATION */
@@ -274,5 +274,5 @@ const footerScene = new ScrollMagic.Scene({
   duration: 0,
 })
   .setTween(footerTL)
-  .addIndicators()
+  // .addIndicators()
   .addTo(homeController);
