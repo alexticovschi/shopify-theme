@@ -61,12 +61,11 @@ body {
   display: none;
 }
 
-.header .mobile-mode .header__open-mobile-menu {
+.header .mobile-mode .open-menu {
   display: block;
 }
 
-.header__open-mobile-menu {
-  display: block;
+.header .open-menu {
   width: 50px;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -77,10 +76,12 @@ body {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  font-size: 1.6rem;
+  font-size: 1.5rem;
   color: var(--white-color);
   text-align: center;
   padding: 0;
+  cursor: pointer;
+  display: none;
 }
 
 .header__menu {
@@ -188,10 +189,12 @@ body {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  font-size: 2rem;
+  font-size: 1.6rem;
   color: var(--white-color);
   position: absolute;
   right: 0;
+  top: -2px;
+  cursor: pointer;
 }
 
 /* Jumbo SECTION */

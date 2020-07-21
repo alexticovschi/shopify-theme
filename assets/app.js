@@ -276,3 +276,56 @@ const footerScene = new ScrollMagic.Scene({
   .setTween(footerTL)
   // .addIndicators()
   .addTo(homeController);
+
+/* Mobile ANIMATION */
+const mobileMenuTL = gsap.timeline({ paused: true });
+mobileMenuTL
+  .fromTo(
+    '.mobile-menu',
+    {
+      x: '-100%',
+    },
+    {
+      x: 0,
+      duration: 0.7,
+    }
+  )
+  .fromTo(
+    '.mobile-menu__link',
+    {
+      y: 50,
+      opacity: 0,
+    },
+    {
+      y: 0,
+      opacity: 1,
+      duration: 0.6,
+      stagger: 0.1,
+    }
+  );
+
+/* open mobile menu when clicking on hamburger menu */
+
+const openMobileMenu = document.querySelector('.open-menu');
+openMobileMenu.addEventListener('click', () => mobileMenuTL.play());
+
+/* close mobile menu when clicking on close menu button */
+
+const closeMobileMenu = document.querySelector('.close-menu');
+closeMobileMenu.addEventListener('click', () => mobileMenuTL.reverse());
+
+/* add classes based on screen size */
+
+const mobileModeOn = () => {
+  if (window.innerWidth <= 991) {
+    document.querySelector('.header__menu').classList.add('mobile-mode');
+  } else {
+    document.querySelector('.header__menu').classList.remove('mobile-mode');
+  }
+};
+
+mobileModeOn();
+
+window.addEventListener('resize', (event) => mobileModeOn());
+
+/* check screen size */
