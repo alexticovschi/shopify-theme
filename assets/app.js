@@ -1,6 +1,9 @@
 const jumboTL = gsap.timeline();
 
 // create a timeline of each animation
+
+/* JUMBO ANIMATION */
+
 jumboTL
   .fromTo(
     '.jumbo__transparent-color',
@@ -9,7 +12,7 @@ jumboTL
     },
     {
       opacity: 1,
-      duration: 1.5,
+      duration: 1.2,
     }
   )
   .fromTo(
@@ -21,7 +24,7 @@ jumboTL
     {
       x: 0,
       opacity: 1,
-      duration: 1.3,
+      duration: 1.2,
     }
   )
   .fromTo(
@@ -86,6 +89,8 @@ jumboTL
     '>-1.8'
   );
 
+/* COLLECTIONS ANIMATION */
+
 const collectionsTL = gsap.timeline();
 collectionsTL
   .fromTo(
@@ -126,8 +131,8 @@ collectionsTL
     '>-.8'
   );
 
+/* ANIMATE ON SCROLL */
 const homeController = new ScrollMagic.Controller();
-
 const collectionsScene = new ScrollMagic.Scene({
   triggerElement: '.collections',
   triggerHook: 1,
@@ -136,5 +141,42 @@ const collectionsScene = new ScrollMagic.Scene({
   duration: 0,
 })
   .setTween(collectionsTL)
+  .addIndicators()
+  .addTo(homeController);
+
+/* HEADER ANIMATION */
+
+const headerTL = gsap.timeline();
+headerTL
+  .fromTo(
+    '.header',
+    {
+      backgroundColor: 'rgba(0,0,0,0)',
+    },
+    {
+      backgroundColor: 'rgba(0,0,0,1)',
+      duration: 0.4,
+    }
+  )
+  .fromTo(
+    '.header__logo a',
+    {
+      scale: 1,
+    },
+    {
+      scale: 0.8,
+      duration: 0.3,
+    },
+    '>-.4'
+  );
+
+const headerScene = new ScrollMagic.Scene({
+  triggerElement: '.jumbo',
+  triggerHook: 1,
+  reverse: true,
+  offset: document.querySelector('.jumbo').offsetHeight + 100,
+  duration: 0,
+})
+  .setTween(headerTL)
   .addIndicators()
   .addTo(homeController);
