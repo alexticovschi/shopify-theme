@@ -6,10 +6,10 @@
   --black-color: #000;
   --grey-color: rgb(204, 204, 204);
   --body-color: #f4f7fd;
-  --jumbo-bg-color: rgba(66, 53, 88, 0.7);
+  --jumbo-bg-color: rgba(33, 24, 42, 0.7);
   --collections-overlay-color: rgba(255, 255, 000, 0.5);
   --right-collection-bg-color: #dddfe4;
-  --off-sale-overlay-bg-color: rgba(0, 0, 0, 0.5);
+  --off-sale-overlay-bg-color: rgba(0, 0, 0, 0.7);
   --product-overlay-bg-color: #161616;
   --footer-bg-color: #1b1b1b;
 }
@@ -25,8 +25,8 @@ a {
 html,
 body {
   font-family: 'Poppins', sans-serif;
+  max-width: 100%;
   overflow-x: hidden;
-  width: 100vw;
   background-color: var(--body-color);
 }
 
@@ -69,6 +69,10 @@ body {
     padding: 0;
     cursor: pointer;
     display: none;
+
+    i {
+      margin-right: -26px;
+    }
   }
 
   &__menu {
@@ -215,20 +219,66 @@ body {
     flex-direction: column;
     justify-content: center;
     height: 100vh;
+  }
 
-    h1 {
-      font-size: 5rem;
-      color: var(--primary-color);
-      font-weight: 900;
-      text-transform: uppercase;
-      transform: translate3d(100px, 0, 0);
+  &__title {
+    font-size: 8rem;
+    color: var(--primary-color);
+    font-weight: 900;
+    text-transform: uppercase;
+    transform: translate3d(100px, 0, 0);
+
+    /* large tablet */
+    @media (max-width: 1336px) {
+      font-size: 9rem;
+      transform: translate3d(80px, 0, 0);
     }
-    h2 {
-      font-size: 5rem;
-      color: var(--white-color);
-      font-weight: 200;
-      text-transform: uppercase;
-      transform: translate3d(130px, 0, 0);
+
+    /* tablet */
+    @media (min-width: 768px) and (max-width: 991px) {
+      font-size: 7rem;
+    }
+
+    /* large phones */
+    @media (min-width: 576px) and (max-width: 767px) {
+      font-size: 4rem;
+      transform: translate3d(40px, 0, 0);
+    }
+
+    /* small phones */
+    @media (max-width: 575px) {
+      font-size: 12vw;
+      transform: translate3d(40px, 0, 0);
+    }
+  }
+
+  &__subtitle {
+    font-size: 7rem;
+    color: var(--white-color);
+    font-weight: 200;
+    text-transform: uppercase;
+    transform: translate3d(130px, 0, 0);
+
+    /* large tablet */
+    @media (max-width: 1336px) {
+      font-size: 6rem;
+    }
+
+    /* tablet */
+    @media (min-width: 768px) and (max-width: 991px) {
+      font-size: 4rem;
+    }
+
+    /* large phones */
+    @media (min-width: 576px) and (max-width: 767px) {
+      font-size: 3rem;
+      transform: translate3d(80px, 0, 0);
+    }
+
+    /* small phones */
+    @media (max-width: 575px) {
+      font-size: 9vw;
+      transform: translate3d(70px, 0, 0);
     }
   }
 
@@ -245,6 +295,17 @@ body {
     &__number {
       font-size: 5rem;
       transform: translate3d(50px, 0, 0);
+
+      /* large phones */
+      @media (min-width: 576px) and (max-width: 767px) {
+        font-size: 4rem;
+      }
+
+      /* small phones */
+      @media (max-width: 575px) {
+        font-size: 3rem;
+        transform: translate3d(20px, 0, 0);
+      }
     }
   }
 
@@ -296,6 +357,16 @@ body {
       font-weight: 700;
       text-transform: uppercase;
 
+      /* tablet */
+      @media (min-width: 768px) and (max-width: 991px) {
+        font-size: 2.5rem;
+      }
+
+      /* small phones */
+      @media (max-width: 575px) {
+        font-size: 12vw;
+      }
+
       span {
         line-height: 1;
         transform: translate3d(-35px, 50px, 0);
@@ -336,6 +407,12 @@ body {
     &__img-wrapper {
       width: 300px;
       height: 300px;
+
+      /* small phones */
+      @media (max-width: 325px) {
+        width: 270px;
+        height: 270px;
+      }
     }
 
     &__img {
@@ -352,6 +429,18 @@ body {
         color: var(--white-color);
         transform: translate3d(-68px, -100px, 0);
         display: block;
+
+        /* tablet */
+        @media (min-width: 768px) and (max-width: 991px) {
+          font-size: 2.5rem;
+          transform: translate3d(-20px, -100px, 0);
+        }
+
+        /* small phones */
+        @media (max-width: 575px) {
+          font-size: 11vw;
+          transform: translate3d(-20px, -100px, 0);
+        }
       }
     }
   }
@@ -381,6 +470,16 @@ body {
     color: var(--white-color);
     font-size: 12rem;
     font-weight: 700;
+
+    /* tablet */
+    @media (min-width: 768px) and (max-width: 991px) {
+      font-size: 9.5rem;
+    }
+
+    /* small phones */
+    @media (max-width: 575px) {
+      font-size: 30vw;
+    }
   }
 
   &__title {
@@ -389,6 +488,11 @@ body {
     font-weight: 700;
     letter-spacing: 15px;
     margin-bottom: 1.5rem;
+
+    /* small phones */
+    @media (max-width: 575px) {
+      font-size: 12vw;
+    }
   }
 
   &__link {
@@ -400,6 +504,13 @@ body {
     border: 2px solid var(--white-color);
     text-transform: uppercase;
     transition: all 0.3s ease-in-out;
+
+    /* small phones */
+    @media (max-width: 575px) {
+      font-size: 1rem;
+      letter-spacing: 13px;
+      padding: 13px 55px;
+    }
 
     &:hover {
       background-color: var(--primary-color);
@@ -494,6 +605,16 @@ body {
 
     li {
       margin-right: 20px;
+
+      /* tablet */
+      @media (min-width: 768px) and (max-width: 991px) {
+        margin-right: 14px;
+      }
+
+      /* small phones */
+      @media (max-width: 575px) {
+        margin-right: 10px;
+      }
     }
 
     a {
@@ -509,6 +630,20 @@ body {
       text-decoration: none;
       transition: all 0.3s ease-in-out;
 
+      /* tablet */
+      @media (min-width: 768px) and (max-width: 991px) {
+        font-size: 1rem;
+        height: 40px;
+        width: 40px;
+      }
+
+      /* small phones */
+      @media (max-width: 575px) {
+        font-size: 1rem;
+        height: 40px;
+        width: 40px;
+      }
+
       &:hover {
         color: var(--black-color);
         background-color: var(--primary-color);
@@ -520,5 +655,31 @@ body {
     color: var(--grey-color);
     text-align: center;
     display: block;
+
+    /* small phones */
+    @media (max-width: 575px) {
+      text-align: left;
+    }
+  }
+}
+
+/* tablet */
+@media (min-width: 768px) and (max-width: 991px) {
+  body {
+    background-color: red;
+  }
+}
+
+/* large phones */
+@media (min-width: 576px) and (max-width: 767px) {
+  body {
+    background-color: yellow;
+  }
+}
+
+/* small phones */
+@media (max-width: 575px) {
+  body {
+    background-color: orangered;
   }
 }
